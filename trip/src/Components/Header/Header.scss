@@ -1,0 +1,165 @@
+
+/* color */
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --BlackColor: hsl(0, 0%, 10%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --texteColor: hsl(240, 1%, 40%);
+    --WhiteColorDeam: hsl(0, 0%, 93%);
+    --grayBg: hsl(0, 0%, 96%);
+    --grayText: hsl(190, 190, 190);
+    --inputColor: hsl(330, 12%, 92%);
+}
+
+.home {
+    height: 84vh;
+    background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)),
+        url(../../assets/05.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+
+    .secContainer {
+        .homeText {
+            text-align: center;
+
+            .title {
+                color: var(--WhiteColor);
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 2.5rem;
+            }
+            .subTitle {
+                color: var(--WhiteColor);
+                opacity: 0.5;
+                font-size: 13px;
+                font-weight: 300;
+                padding: 1rem 0;
+                max-width: 70%;
+                text-align: center;
+                margin: auto;
+            }
+
+            .btn {
+                padding: 0.4rem 1.5rem;
+            }
+        }
+
+        .homeCard {
+            width: 80%;
+            border-radius: 1rem;
+            padding: 2rem;
+            background: var(--WhiteColor);
+            position: absolute;
+            justify-content: center;
+            bottom: -35%;
+            transform: translate(-50%);
+            left: 50%;
+            box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+            display: grid;
+            grid-gap: 1rem; /* اضافه کردن فاصله بین grid items */
+            padding: 1rem; /* اضافه کردن padding برای ایجاد فاصله بین آیتم‌ها */
+
+            .locationDiv,
+            .distDiv,
+            .pricDiv {
+                width: 100%;
+
+                label {
+                    display: block;
+                    color: var(--texteColor);
+                    font-weight: 500;
+                    font-size: 13px;
+                    padding-bottom: 1.5px;
+                    padding-right: 10%;
+                }
+
+                input {
+                    width: 100%;
+                    background: var(--inputColor);
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 13px;
+                    font-weight: 500;
+                    padding: .6rem 1.7rem;
+                    margin: 2px 0;
+
+                    &::placeholder {
+                        font-size: 13px;
+                        opacity: 0.5;
+                        font-weight: 400;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .btn {
+                width: 100%;
+                padding: .6rem 1.7rem;
+                color: var(--WhiteColor);
+                font-weight: 600;
+                margin: .1rem 0;
+            }
+        }
+    }
+
+    /* media queries */
+    @media screen and (min-width: 480px) {
+        .secContainer {
+            .homeCard {
+                bottom: -100px;
+                width: 80%;
+                grid-template-columns: repeat(2, 1fr);
+
+                .btn {
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 556px) {
+        .secContainer {
+            .homeText {
+                .title {
+                    font-size: 2.5rem;
+                }
+                .subTitle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 720px) {
+        .secContainer {
+            .homeCard {
+                bottom: -10%;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .secContainer {
+            .homeText {
+                .subTitle {
+                    font-size: 20px;
+                }
+            }
+
+            .homeCard {
+                width: 60%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

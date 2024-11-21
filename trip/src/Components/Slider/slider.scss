@@ -1,0 +1,35 @@
+.slider {
+    margin: 0 1%;
+    h2{
+        padding: 10px;
+        margin: 15px;
+    }
+    p{
+        padding: 10px;
+        margin: 15px;
+    }
+}
+
+.item {
+    min-height: 40rem;
+    min-width: 30rem;
+    padding: 40px;
+
+}
+
+.item img {
+    width: 100%;
+    height: 50%;
+    border-radius: 2rem;
+    pointer-events: none;
+}
+
+.inner-carousel {
+    display: flex;
+
+}
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+}

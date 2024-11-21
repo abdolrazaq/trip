@@ -1,0 +1,105 @@
+/* color*/
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --BlackColor: hsl(0, 0%, 10%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --texteColor: hsl(240, 1%, 40%);
+    --WhiteColorDeam: hsl(0, 0%, 93%);
+    --grayBg: hsl(0, 0%, 96%);
+    --grayText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 92%);
+    box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+  
+  }
+  
+  .app-container {
+    display: flex;
+    height: 100vh; 
+    padding: 20px; 
+    justify-content: center; 
+    align-items: flex-start; 
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--WhiteColor); 
+    margin: 10px;
+    border-radius: 10px; 
+    box-shadow: var(box-shadow); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+  
+  .animation-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--WhiteColor); 
+    margin: 10px; 
+    border-radius: 10px; 
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--grayBg);
+    
+  }
+  
+  h2 {
+    margin-bottom: 20px; 
+    color: var(--BlackColor); 
+    font-size: 24px; 
+    text-align: center; 
+  }
+  
+  .form-group {
+    margin-bottom: 15px; 
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+
+   
+   
+  }
+  
+  label {
+    margin-bottom: 5px;
+   
+    
+  }
+  
+  input, textarea {
+    width: 80%; 
+    padding: 10px;
+    border: 1px solid  var(--grayText);
+    border-radius: 4px;
+    transition: border-color 0.3s; 
+  }
+  
+  input:focus, textarea:focus {
+    border-color: var(--PrimaryColor); 
+    outline: none; 
+  }
+  .button1 {
+    width: 15%; 
+    padding: 10px;
+    background-color: var(--PrimaryColor);
+    color: var(--WhiteColor);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+    margin : 0 10px;
+  }
+  
+  .button1:hover {
+    background-color: var(--HoverColor);
+  }
